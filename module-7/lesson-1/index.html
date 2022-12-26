@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .centered-content {
+            height: 50vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .tabs {
+            display: flex;
+        }
+
+        .tabs-title {
+            padding: 20px;
+            background-color: #23201D;
+            color: #937341;
+            cursor: pointer;
+        }
+
+        .tabs-title.active {
+            background-color:#937341 ;
+            color: #23201D;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        #root{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        #root > div{
+            text-align: center;
+            font-size: 20px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+<div class="centered-content">
+    <ul class="tabs">
+        <li class="tabs-title active">Akali</li>
+        <li class="tabs-title">Anivia</li>
+        <li class="tabs-title">Draven</li>
+        <li class="tabs-title">Garen</li>
+        <li class="tabs-title">Katarina</li>
+        <li class="tabs-title">Hello</li>
+    </ul>
+    <ul class="tabs-content">
+        <!-- Akali -->
+        <li data-tab ="Akali" >Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be
+            the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has
+            pledged to defend Ionia from its enemies, one kill at a time. Akali may strike in silence, but her
+            message will be heard loud and clear: fear the assassin with no maste</li>
+        <!-- Anivia -->
+        <li data-tab ="Anivia" class="hidden" >Anivia is a benevolent winged spirit who endures endless cycles of life, death, and rebirth to protect
+            the Freljord. A demigod born of unforgiving ice and bitter winds, she wields those elemental powers to
+            thwart any who dare disturb her homeland. Anivia guides and protects the tribes of the harsh north, who
+            revere her as a symbol of hope, and a portent of great change. She fights with every ounce of her
+            being, knowing that through her sacrifice, her memory will endure, and she will be reborn into a new
+            tomorrow.</li>
+        <!--Draven -->
+        <li data-tab ="Draven" class="hidden"> Noxus, warriors known as reckoners face one another in arenas where blood is spilled and strength
+            tested—but none has ever been as celebrated as Draven. A former soldier, he found that the crowds
+            uniquely appreciated his flair for the dramatic, not to mention the spray of blood from each of his
+            spinning axes. Addicted to the spectacle of his own brash perfection, Draven has sworn to defeat
+            whomever he must to ensure that his name is chanted throughout the empire forever more.</li>
+        <!-- Garen -->
+        <li data-tab ="Garen"  class="hidden">A proud and noble soldier, Garen fights at the head of the Dauntless Vanguard. He is popular among his
+            fellows, and respected well enough by his enemies—not least as a scion of the prestigious Crownguard
+            family, entrusted with defending Demacia and its ideals. Clad in magic-resistant armor and bearing a
+            mighty broadsword, Garen stands ready to confront mages and sorcerers on the field of battle, in a
+            veritable whirlwind of righteous steel.</li>
+        <!-- Katarina -->
+        <li data-tab ="Katarina" class="hidden">Decisive in judgment and lethal in combat, Katarina is a Noxian assassin of the highest caliber. Eldest
+            daughter to the legendary General Du Couteau, she made her talents known with swift kills against
+            unsuspecting enemies. Her fiery ambition has driven her to pursue heavily-guarded targets, even at the
+            risk of endangering her allies—but no matter the mission, Katarina will not hesitate to execute her
+            duty amid a whirlwind of serrated daggers.</li>
+            <li class="hidden" data-tab="Hello">Hello content</li>
+    </ul>
+</div>
+<div id="circle-task"></div>
+   <button class = 'draw-btn'>Draw circle</button>
+</div>
+<div id="root"></div>
+<script src="./script.js"></script>
+</body>
+</html>
