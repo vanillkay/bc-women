@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    table, th, td {
+        border: 1px solid;
+    }
+
+    td:hover{
+        cursor: pointer;
+    }
+
+    .cell{
+        width: 30px;
+        height: 30px;
+    }
+
+    .black {
+        background-color: black;
+    }
+
+
+
+    .reverse .black{
+        background-color: #fff;
+    }
+
+    .reverse :not(.black) {
+        background-color: black;
+    }
+
+</style>
+<body>
+<div id="root">
+</div>
+
+<script
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+<script src="script.js"></script>
+</body>
+</html>

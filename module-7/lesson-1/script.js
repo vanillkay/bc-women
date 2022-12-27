@@ -117,6 +117,7 @@ function onBtnClick(event) {
 
 function createCircle(diametr) {
     console.log('circles', typeof diametr)
+    
 
     if(Number(diametr) < 0){
          return;
