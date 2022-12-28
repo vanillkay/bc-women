@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
+  <body>
+    <div class="form__group field">
+      <input type="text" class="form__field" name="string" id='str' required />
+      <label for="str" class="form__label">String to transform</label>
+    </div>
+    <div class="controls">
+      <div class="result-str">
+        <button data-case="camelCase">Transform to Camel Case</button>
+        <span></span>
+      </div>
+      <div class="result-str" >
+        <button data-case="kebabCase">Transform to Kebab Case</button>
+        <span></span>
+      </div>
+      <div class="result-str">
+        <button data-case="snakeCase">Transform to Snake Case</button>
+        <span></span>
+      </div>
+      <div class="result-str">
+        <button data-case='swapCase'>Transform to Swap Case</button>
+        <span></span>
+      </div>
+      <div class="result-str">
+        <button data-case="lowerCase">Transform to Lower Case</button>
+        <span></span>
+      </div>
+      <div class="result-str" >
+        <button data-case="upperCase">Transform to Upper Case</button>
+        <span></span>
+      </div>
+  
+      <div class="result-str" >
+        <button data-case="titleCase">Transform to Title Case</button>
+        <span></span>
+      </div>
+
+    </div>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
