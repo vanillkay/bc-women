@@ -1,4 +1,67 @@
 import lsMethods from './storage.js'
+
+
+const slider = document.querySelector('#slider');
+const THEME_KEY = 'currentTheme';
+const DARK_THEME = 'theme-dark';
+const LIGHT_THEME = 'theme-light';
+
+
+function onSliderChange () {
+const newTheme =  slider.checked ?  DARK_THEME : LIGHT_THEME;
+document.body.className = newTheme;
+
+lsMethods.save(THEME_KEY, newTheme);
+
+// if (slider.checked) {
+//     document.body.className = 'theme-dark';
+// }
+// else {
+//     document.body.className = 'theme-light'
+// }
+}
+
+
+function updateTheme () {
+  const savedTheme = lsMethods.load(THEME_KEY);
+
+  if (savedTheme === DARK_THEME) {
+    document.body.className = savedTheme;
+    slider.checked = true;
+  }
+
+}
+
+
+updateTheme();
+
+
+// (function () {
+//     const savedTheme = lsMethods.load(THEME_KEY);
+
+//     if (savedTheme === DARK_THEME) {
+//         document.body.className = savedTheme;
+//         slider.checked = true;
+//         console.log('Check')
+//     }
+// })()
+
+// ((param) => {
+//     console.log(param);
+//     const savedTheme = lsMethods.load(THEME_KEY);
+
+//     if (savedTheme === DARK_THEME) {
+//         document.body.className = savedTheme;
+//         slider.checked = true;
+//         // console.log('Check')
+//     }
+
+// })('hello')
+
+// IIFE 
+
+
+slider.addEventListener('change', onSliderChange)
 // light - 'theme-light'
 // dark - 'theme-dark'
 
