@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .image-to-show {
+            width: 200px;
+            height: 200px;
+        }
+
+        .images-wrapper {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!-- <input type="date" >
+<div id="root"></div>     -->
+<div class="images-wrapper">
+    <img src="./img/1.jpeg" alt="animal" class="image-to-show" />
+    <img src="./img/2.jpeg" alt="animal" class="image-to-show" />
+    <img src="./img/3.jpeg" alt="animal" class="image-to-show" />
+    <img src="./img/4.jpeg" alt="animal" class="image-to-show" />
+</div>
+<button type="button" id="stop">Stop</button>
+<button type="button" id="restart">Restart</button>
+<script src="script.js"></script>
+</body>
+</html>
