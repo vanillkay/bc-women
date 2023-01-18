@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .backdrop{
+            background-color: grey;
+            opacity: .8;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .modal{
+            position: absolute;
+            top: 50%;
+            height: 300px;
+            width: 300px;
+            margin-top: -150px;
+            left: 50%;
+            background-color: #fff;
+            margin-left: -150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            border-radius: 20px;
+            display: flex;
+            z-index: 10;
+        }
+
+        .modal-close{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 10px;
+            height: 10px;
+            z-index: 10;
+            font-size: 10px;
+        }
+
+
+        .modal-close:hover{
+            cursor: pointer;
+        }
+
+
+        .backdrop.hidden, .modal.hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <span>|</span>
+        <button data-modal-type="green">Green</button>
+        <span>|</span>
+        <button data-modal-type="blue">Blue</button>
+        <span>|</span>
+        <button data-modal-type="red">Red</button>
+        <span>|</span>
+    </div>
+
+    <div class="backdrop hidden">
+        <div class="modal hidden">
+            <img class="modal-close" src="https://cdn2.iconfinder.com/data/icons/apple-watch-outline-24/24/Cancel_close_delete_dismiss_modal_remove-512.png" alt="">
+            <span class="title"></span>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
